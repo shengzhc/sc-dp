@@ -9,6 +9,8 @@ Decorator Pattern
    'treated' as a container node with extra process.
 4. Component doesn't initialize with another compoent, but Decorator
    can be initialized with component or decorator(implements component)
+5. In general, Decorator Pattern better fits for cases where inheritance
+   is not a good option.
 
 """
 
