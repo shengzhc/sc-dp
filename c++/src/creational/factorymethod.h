@@ -1,3 +1,6 @@
+#ifndef FACTORY_METHOD_DESIGN_PATTERN
+#define FACTORY_METHOD_DESIGN_PATTERN
+
 #include <iostream>
 
 #include "designpattern.h"
@@ -40,3 +43,5 @@ namespace factorymethod {
 		void example();
 	};
 }
+
+#endif

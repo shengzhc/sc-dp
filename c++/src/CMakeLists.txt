@@ -12,6 +12,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED True)
 add_executable(SC_DP_CPP 
 	app.cpp
 	creational/factorymethod.cpp
+	creational/abstractfactory.cpp
 )
 
 target_link_libraries(SC_DP_CPP PUBLIC ${EXTRA_LIBS})
