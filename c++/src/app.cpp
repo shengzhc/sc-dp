@@ -6,6 +6,7 @@
 int main(int argc, char const *argv[])
 {
 	using namespace std;
+	using namespace designpattern;
 	cout << "Design Pattern Examples..." << endl;
 	cout << "1. Creational - Factory Method" << endl;
 	cout << "2. Creational - Abstract Factory" << endl;

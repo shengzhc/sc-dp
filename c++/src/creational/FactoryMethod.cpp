@@ -3,14 +3,7 @@
 #include "factorymethod.h"
 
 namespace factorymethod {
-	void ConcreteProductA::doSomeWork() {
-		std::cout << "ConcreteProductA::doSomeWork()" << std::endl;	
-	}
-
-	void ConcreteProductB::doSomeWork() {
-		std::cout << "ConcreteProductB::doSomeWork()" << std::endl;
-	}
-
+	using namespace designpattern;
 	Product *ConcreteFactoryA::createProduct() {
 		return new ConcreteProductA();
 	}

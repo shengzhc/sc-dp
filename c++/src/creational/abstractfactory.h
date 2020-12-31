@@ -64,7 +64,7 @@ namespace abstractfactory {
 		};
 	}
 
-	class AbstractFactoryDesignPattern : public DesignPattern {
+	class AbstractFactoryDesignPattern : public designpattern::DesignPattern {
 	public:
 		void example();
 	};
