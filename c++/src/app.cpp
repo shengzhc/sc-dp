@@ -8,7 +8,7 @@ int main(int argc, char const *argv[])
 	cout << "1. Creational - Factory Method" << endl;
 	cout << "Choose the example aboove(Q or q to abort): " << endl;
 	
-	char input = '';
+	char input = ' ';
 	cin >> input;
 	while (tolower(input) != 'q') {
 		int _case = input - '0';
