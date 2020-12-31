@@ -1,5 +1,7 @@
 #include <iostream>
 
+#include "factorymethod.h"
+
 using namespace std;
 
 int main(int argc, char const *argv[])
@@ -12,11 +14,12 @@ int main(int argc, char const *argv[])
 		char input = ' ';
 		cin >> input;
 		if (tolower(input) == 'q') break;
-		switch (input - '0') {
-			case 0:
+		switch ((int)(input - '0')) {
+			case 1: {
+				DesignPattern *const dp = new factorymethod::FactoryMethodDesignPattern();
+				dp->example();
 				break;
-			case 1:
-				break;
+			}
 			default:
 				cout << "Please enter a number shown above" << endl;
 				continue;

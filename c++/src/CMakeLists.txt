@@ -9,12 +9,20 @@ set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 
 # add the executable
-add_executable(SC_DP_CPP app.cpp)
+add_executable(SC_DP_CPP 
+	app.cpp
+	creational/factorymethod.cpp
+)
 
 target_link_libraries(SC_DP_CPP PUBLIC ${EXTRA_LIBS})
 
 target_include_directories(SC_DP_CPP PUBLIC 
-  "${PROJECT_BINARY_DIR}" 
+  "${PROJECT_BINARY_DIR}"
+  $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/creational>
+)
+
+target_include_directories(SC_DP_CPP PRIVATE
+  $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/base>
 )
 
 install(TARGETS SC_DP_CPP DESTINATION bin)
