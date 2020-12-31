@@ -1,1 +1,6 @@
 *.DS_Store
+
+# cpp
+c++/**/build
+c++/**/install
+c++/**/*.out
