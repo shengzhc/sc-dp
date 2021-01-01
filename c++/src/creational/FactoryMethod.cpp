@@ -4,7 +4,6 @@
 #include "factorymethod.h"
 
 namespace factorymethod {
-	using namespace designpattern;
 	Product *ConcreteFactoryA::createProduct() {
 		return new ConcreteProductA();
 	}

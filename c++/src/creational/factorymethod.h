@@ -8,19 +8,38 @@
 
 namespace factorymethod {
 	namespace {
+		class Product {
+		public:
+			virtual void doSomeWork() = 0;
+		};
+
+		class ConcreteProductA : public Product {
+		public:
+			void doSomeWork() {
+				std::cout << "ConcreteProductA::doSomeWork()" << std::endl;	
+			}
+		};
+
+		class ConcreteProductB : public Product {
+		public:
+			void doSomeWork() {
+				std::cout << "ConcreteProductB::doSomeWork()" << std::endl;
+			}
+		};
+
 		class Factory {
 		public:
-			virtual designpattern::Product *createProduct() = 0;
+			virtual Product *createProduct() = 0;
 		};
 
 		class ConcreteFactoryA : public Factory {
 		public:
-			designpattern::Product *createProduct();
+			Product *createProduct();
 		};
 
 		class ConcreteFactoryB : public Factory {
 		public:
-			designpattern::Product *createProduct();
+			Product *createProduct();
 		};
 	}
 

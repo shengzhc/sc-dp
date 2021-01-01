@@ -13,23 +13,4 @@ namespace designpattern {
 
 		virtual std::string getName() = 0;
 	};
-
-	class Product {
-	public:
-		virtual void doSomeWork() = 0;
-	};
-
-	class ConcreteProductA : public Product {
-	public:
-		void doSomeWork() {
-			std::cout << "ConcreteProductA::doSomeWork()" << std::endl;	
-		}
-	};
-
-	class ConcreteProductB : public Product {
-	public:
-		void doSomeWork() {
-			std::cout << "ConcreteProductB::doSomeWork()" << std::endl;
-		}
-	};
 }

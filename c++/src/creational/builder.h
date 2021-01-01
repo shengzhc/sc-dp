@@ -7,8 +7,12 @@
 #include "designpattern.h"
 
 namespace builder {
-	using namespace designpattern;
 	namespace {
+		class Product {
+		public:
+			virtual void doSomeWork() = 0;
+		};
+
 		class Builder {
 		protected:
 			std::string name;
@@ -41,7 +45,7 @@ namespace builder {
 		};
 	}
 
-	class BuilderDesignPattern : public DesignPattern {
+	class BuilderDesignPattern : public designpattern::DesignPattern {
 	public:
 		void example();
 		std::string getName();
