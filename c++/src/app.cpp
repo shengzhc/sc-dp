@@ -3,6 +3,7 @@
 #include "factorymethod.h"
 #include "abstractfactory.h"
 #include "builder.h"
+#include "singleton.h"
 
 int main(int argc, char const *argv[])
 {
@@ -12,6 +13,7 @@ int main(int argc, char const *argv[])
 	cout << "1. Creational - Factory Method" << endl;
 	cout << "2. Creational - Abstract Factory" << endl;
 	cout << "3. Creational - Builder" << endl;
+	cout << "4. Creational - Singleton" <<endl;
 
 	do {
 		cout << "Choose the example aboove(Q or q to abort): ";
@@ -34,6 +36,12 @@ int main(int argc, char const *argv[])
 				dp->example();
 				break;
 			}
+			case 4: {
+				DesignPattern *const dp = new singleton::SingletonDesignPattern();
+				dp->example();
+				break;
+			}
+
 			default:
 				cout << "Please enter a number shown above" << endl;
 				continue;
