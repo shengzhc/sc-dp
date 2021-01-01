@@ -7,6 +7,7 @@
 #include "singleton.h"
 #include "adapter.h"
 #include "bridge.h"
+#include "composite.h"
 
 int main(int argc, char const *argv[])
 {
@@ -19,6 +20,7 @@ int main(int argc, char const *argv[])
 	cout << "4. Creational - Singleton" << endl;
 	cout << "5. Structual - Adapter" << endl;
 	cout << "6. Structual - Bridge" << endl;
+	cout << "7. Structual - Composite" << endl;
 
 	do {
 		cout << "Choose the example aboove(Q or q to abort): ";
@@ -49,6 +51,10 @@ int main(int argc, char const *argv[])
 			}
 			case 6: {
 				dp = new bridge::BridgeDesignPattern();
+				break;
+			}
+			case 7: {
+				dp = new composite::CompositeDesignPattern();
 				break;
 			}
 
