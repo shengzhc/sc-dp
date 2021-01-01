@@ -44,6 +44,7 @@ namespace builder {
 	class BuilderDesignPattern : public DesignPattern {
 	public:
 		void example();
+		std::string getName();
 	};
 }
 

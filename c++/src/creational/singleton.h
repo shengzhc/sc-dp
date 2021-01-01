@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 
 #include "designpattern.h"
 
@@ -25,5 +26,6 @@ namespace singleton {
 	class SingletonDesignPattern : public designpattern::DesignPattern {
 	public:
 		void example();
+		std::string getName();
 	};
 }

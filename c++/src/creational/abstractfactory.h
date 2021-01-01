@@ -67,6 +67,7 @@ namespace abstractfactory {
 	class AbstractFactoryDesignPattern : public designpattern::DesignPattern {
 	public:
 		void example();
+		std::string getName();
 	};
 }
 

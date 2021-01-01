@@ -24,10 +24,12 @@ namespace bridge {
 	}
 
 	void BridgeDesignPattern::example() {
-		std::cout << "\n\n\n=======Bridge Design Pattern=======\n" << std::endl;
 		Service *service = new BackService();
 		Application *app = new Application(service);
 		app->doSomeWork();
-		std::cout << "\n=======================================" << std::endl;
+	}
+
+	std::string BridgeDesignPattern::getName() {
+		return "Bridge Design Pattern";	
 	}
 }

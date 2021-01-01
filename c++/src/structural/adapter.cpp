@@ -27,11 +27,13 @@ namespace adapter {
 	}
 
 	void AdapterDesignPattern::example() {
-		std::cout << "\n\n\n=======Adapter Design Pattern=======\n" << std::endl;
 		string data = "Hello World";
 		IService *const service = new Service();
 		IService *const adapter = new Adapter(service);
 		adapter->doSomeWork(data);
-		std::cout << "\n=======================================" << std::endl;
+	}
+
+	std::string AdapterDesignPattern::getName() {
+		return "Adapter Design Pattern";
 	}
 }

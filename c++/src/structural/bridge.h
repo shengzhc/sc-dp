@@ -34,6 +34,7 @@ namespace bridge {
 	class BridgeDesignPattern : public designpattern::DesignPattern {
 	public:
 		void example();
+		std::string getName();
 	};
 }
 

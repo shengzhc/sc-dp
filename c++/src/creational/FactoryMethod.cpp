@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 
 #include "factorymethod.h"
 
@@ -13,13 +14,15 @@ namespace factorymethod {
 	}
 
 	void FactoryMethodDesignPattern::example() {
-		std::cout << "\n\n\n=======Factory Design Pattern=======\n" << std::endl;
 		Factory *f = new ConcreteFactoryA();
 		Product *p = f->createProduct();
 		p->doSomeWork();
 		f = new ConcreteFactoryB();
 		p = f->createProduct();
 		p->doSomeWork();
-		std::cout << "\n=======================================" << std::endl;
+	}
+
+	std::string FactoryMethodDesignPattern::getName() {
+		return "Factory Design Pattern";
 	}
 }

@@ -30,6 +30,7 @@ namespace adapter {
 	class AdapterDesignPattern : public designpattern::DesignPattern {
 	public:
 		void example();
+		std::string getName();
 	};
 }
 

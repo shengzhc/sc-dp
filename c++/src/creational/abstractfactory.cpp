@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 
 #include "abstractfactory.h"
 
@@ -20,7 +21,6 @@ namespace abstractfactory {
 	}
 
 	void AbstractFactoryDesignPattern::example() {
-		std::cout << "\n\n\n=======Abstract Factory Design Pattern=======\n" << std::endl;
 		std::cout << "\nWood Factory: " << std::endl;
 		AbstractFactory *f = new WoodFactory();
 		f->createChair()->doChair();
@@ -29,6 +29,9 @@ namespace abstractfactory {
 		f = new SteelFactory();
 		f->createChair()->doChair();
 		f->createTable()->doTable();
-		std::cout << "\n=======================================" << std::endl;
+	}
+
+	std::string AbstractFactoryDesignPattern::getName() {
+		return "Abstract Factory Design Pattern";
 	}
 }

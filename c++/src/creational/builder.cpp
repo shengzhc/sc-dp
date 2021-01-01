@@ -12,13 +12,15 @@ namespace builder {
 	}
 
 	void BuilderDesignPattern::example() {
-		std::cout << "\n\n\n=======Builder Design Pattern=======\n" << std::endl;
 		Builder *b = new ConcreteBuilderA();
 		b->withPrice(10)->withName("Product Chair");
 		b->getResult()->doSomeWork();
 		b = new ConcreteBuilderB();
 		b->withPrice(20)->withName("Product Table");
 		b->getResult()->doSomeWork();
-		std::cout << "\n=======================================" << std::endl;
+	}
+
+	std::string BuilderDesignPattern::getName() {
+		return "Builder Design Pattern";
 	}
 }

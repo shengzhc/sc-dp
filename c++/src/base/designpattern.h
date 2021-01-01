@@ -1,6 +1,7 @@
 #pragma once
 
 #include <iostream>
+#include <string>
 
 namespace designpattern {
 	class DesignPattern {
@@ -9,6 +10,8 @@ namespace designpattern {
 		virtual void example() {
 			std::cout << "Subclass to implement example for design pattern" << std::endl;
 		}
+
+		virtual std::string getName() = 0;
 	};
 
 	class Product {

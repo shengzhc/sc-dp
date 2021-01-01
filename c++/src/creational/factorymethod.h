@@ -2,6 +2,7 @@
 #define FACTORY_METHOD_DESIGN_PATTERN
 
 #include <iostream>
+#include <string>
 
 #include "designpattern.h"
 
@@ -26,6 +27,7 @@ namespace factorymethod {
 	class FactoryMethodDesignPattern : public designpattern::DesignPattern {
 	public:
 		void example();
+		std::string getName();
 	};
 }
 

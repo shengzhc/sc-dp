@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 
 #include "factorymethod.h"
 #include "abstractfactory.h"
@@ -56,7 +57,9 @@ int main(int argc, char const *argv[])
 				continue;
 		}
 		if (dp != NULL) {
+			std::cout << "\n\n\n=======" << dp->getName() << "=======\n" << std::endl;
 			dp->example();
+			std::cout << "\n=======================================" << std::endl;
 		}
 	} while (true);
 	return 0;
