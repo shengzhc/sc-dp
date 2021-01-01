@@ -1,3 +1,6 @@
+#ifndef COMPOSITE_DESIGN_PATTERN
+#define COMPOSITE_DESIGN_PATTERN
+
 #include <iostream>
 #include <vector>
 
@@ -36,3 +39,5 @@ namespace composite {
 		std::string getName();
 	};
 }
+
+#endif

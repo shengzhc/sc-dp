@@ -8,6 +8,7 @@
 #include "adapter.h"
 #include "bridge.h"
 #include "composite.h"
+#include "decorator.h"
 
 int main(int argc, char const *argv[])
 {
@@ -21,6 +22,7 @@ int main(int argc, char const *argv[])
 	cout << "5. Structual - Adapter" << endl;
 	cout << "6. Structual - Bridge" << endl;
 	cout << "7. Structual - Composite" << endl;
+	cout << "8. Structual - Decorator" << endl;
 
 	do {
 		cout << "Choose the example aboove(Q or q to abort): ";
@@ -57,15 +59,19 @@ int main(int argc, char const *argv[])
 				dp = new composite::CompositeDesignPattern();
 				break;
 			}
+			case 8: {
+				dp = new decorator::DecoratorDesignPattern();
+				break;
+			}
 
 			default:
 				cout << "Please enter a number shown above" << endl;
 				continue;
 		}
 		if (dp != NULL) {
-			std::cout << "\n\n\n=======" << dp->getName() << "=======\n" << std::endl;
+			std::cout << "\n\n=======" << dp->getName() << "=======\n\n" << std::endl;
 			dp->example();
-			std::cout << "\n=======================================" << std::endl;
+			std::cout << "\n\n=======================================\n\n" << std::endl;
 		}
 	} while (true);
 	return 0;
