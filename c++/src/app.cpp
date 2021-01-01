@@ -5,6 +5,7 @@
 #include "builder.h"
 #include "singleton.h"
 #include "adapter.h"
+#include "bridge.h"
 
 int main(int argc, char const *argv[])
 {
@@ -16,42 +17,46 @@ int main(int argc, char const *argv[])
 	cout << "3. Creational - Builder" << endl;
 	cout << "4. Creational - Singleton" << endl;
 	cout << "5. Structual - Adapter" << endl;
+	cout << "6. Structual - Bridge" << endl;
 
 	do {
 		cout << "Choose the example aboove(Q or q to abort): ";
 		char input = ' ';
 		cin >> input;
 		if (tolower(input) == 'q') break;
+		DesignPattern *dp = NULL;
 		switch ((int)(input - '0')) {
 			case 1: {
-				DesignPattern *const dp = new factorymethod::FactoryMethodDesignPattern();
-				dp->example();
+				dp = new factorymethod::FactoryMethodDesignPattern();
 				break;
 			}
 			case 2: {
-				DesignPattern *const dp = new abstractfactory::AbstractFactoryDesignPattern();
-				dp->example();
+				dp = new abstractfactory::AbstractFactoryDesignPattern();
 				break;
 			}
 			case 3: {
-				DesignPattern *const dp = new builder::BuilderDesignPattern();
-				dp->example();
+				dp = new builder::BuilderDesignPattern();
 				break;
 			}
 			case 4: {
-				DesignPattern *const dp = new singleton::SingletonDesignPattern();
-				dp->example();
+				dp = new singleton::SingletonDesignPattern();
 				break;
 			}
 			case 5: {
-				DesignPattern *const dp = new adapter::AdapterDesignPattern();
-				dp->example();
+				dp = new adapter::AdapterDesignPattern();
+				break;
+			}
+			case 6: {
+				dp = new bridge::BridgeDesignPattern();
 				break;
 			}
 
 			default:
 				cout << "Please enter a number shown above" << endl;
 				continue;
+		}
+		if (dp != NULL) {
+			dp->example();
 		}
 	} while (true);
 	return 0;

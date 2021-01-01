@@ -13,6 +13,10 @@ namespace adapter {
 		cout << "Service::doSomeWork is converting data to upper-case and result is: " << data << endl;
 	}
 
+	Adapter::Adapter(IService *service) {
+		this->service = service;
+	}
+
 	void Adapter::doSomeWork(std::string data) {
 		cout << "Adapter::doSomeWork is adding 1 to each char, before: " << data << endl;
 		std::for_each(data.begin(), data.end(), [](char &c) {

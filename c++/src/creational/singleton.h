@@ -4,9 +4,10 @@
 
 namespace singleton {
 	namespace {
+		class Singleton;
+		static Singleton *instance;
 		class Singleton {
 		private:
-			static Singleton *instance;
 			int value;
 			Singleton(): value(-1) {}
 		public:
@@ -18,7 +19,7 @@ namespace singleton {
 			}
 			void setValue(int value) { this->value = value; }
 			int getValue() { return this->value; }
-		};		
+		};
 	}
 
 	class SingletonDesignPattern : public designpattern::DesignPattern {

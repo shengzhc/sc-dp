@@ -22,8 +22,8 @@ namespace adapter {
 		private:
 			IService *service;
 		public:
-			Adapter(IService *service) : service(service) {}
 			void doSomeWork(std::string data);
+			Adapter(IService *service);
 		};
 	}
 

@@ -3,7 +3,6 @@
 #include "singleton.h"
 
 namespace singleton {
-	Singleton *Singleton::instance;
 	void SingletonDesignPattern::example() {
 		std::cout << "\n\n\n=======Singleton Design Pattern=======\n" << std::endl;
 		Singleton *const s1 = Singleton::getInstance();
