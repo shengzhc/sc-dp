@@ -9,6 +9,7 @@
 #include "bridge.h"
 #include "composite.h"
 #include "decorator.h"
+#include "facade.h"
 
 int main(int argc, char const *argv[])
 {
@@ -23,6 +24,7 @@ int main(int argc, char const *argv[])
 	cout << "6. Structual - Bridge" << endl;
 	cout << "7. Structual - Composite" << endl;
 	cout << "8. Structual - Decorator" << endl;
+	cout << "9. Structual - Facade" << endl;
 
 	do {
 		cout << "Choose the example aboove(Q or q to abort): ";
@@ -61,6 +63,10 @@ int main(int argc, char const *argv[])
 			}
 			case 8: {
 				dp = new decorator::DecoratorDesignPattern();
+				break;
+			}
+			case 9: {
+				dp = new facade::FacadeDesignPattern();
 				break;
 			}
 
