@@ -2,6 +2,7 @@
 
 #include "factorymethod.h"
 #include "abstractfactory.h"
+#include "builder.h"
 
 int main(int argc, char const *argv[])
 {
@@ -10,6 +11,7 @@ int main(int argc, char const *argv[])
 	cout << "Design Pattern Examples..." << endl;
 	cout << "1. Creational - Factory Method" << endl;
 	cout << "2. Creational - Abstract Factory" << endl;
+	cout << "3. Creational - Builder" << endl;
 
 	do {
 		cout << "Choose the example aboove(Q or q to abort): ";
@@ -24,6 +26,11 @@ int main(int argc, char const *argv[])
 			}
 			case 2: {
 				DesignPattern *const dp = new abstractfactory::AbstractFactoryDesignPattern();
+				dp->example();
+				break;
+			}
+			case 3: {
+				DesignPattern *const dp = new builder::BuilderDesignPattern();
 				dp->example();
 				break;
 			}
