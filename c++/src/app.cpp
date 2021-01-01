@@ -10,6 +10,7 @@
 #include "composite.h"
 #include "decorator.h"
 #include "facade.h"
+#include "flyweight.h"
 
 int main(int argc, char const *argv[])
 {
@@ -25,14 +26,16 @@ int main(int argc, char const *argv[])
 	cout << "7. Structual - Composite" << endl;
 	cout << "8. Structual - Decorator" << endl;
 	cout << "9. Structual - Facade" << endl;
+	cout << "10. Structural - Flyweight" << endl;
 
 	do {
-		cout << "Choose the example aboove(Q or q to abort): ";
-		char input = ' ';
+		cout << "Choose the example aboove(q to abort): ";
+		string input = "";
 		cin >> input;
-		if (tolower(input) == 'q') break;
+		if (input == "q") break;
 		DesignPattern *dp = NULL;
-		switch ((int)(input - '0')) {
+		int i = std::stoi(input);
+		switch (i) {
 			case 1: {
 				dp = new factorymethod::FactoryMethodDesignPattern();
 				break;
@@ -67,6 +70,10 @@ int main(int argc, char const *argv[])
 			}
 			case 9: {
 				dp = new facade::FacadeDesignPattern();
+				break;
+			}
+			case 10: {
+				dp = new flyweight::FlyweightDesignPattern();
 				break;
 			}
 

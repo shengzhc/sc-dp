@@ -20,6 +20,7 @@ add_executable(SC_DP_CPP
 	structural/composite.cpp
 	structural/decorator.cpp
 	structural/facade.cpp
+	structural/flyweight.cpp
 )
 
 target_link_libraries(SC_DP_CPP PUBLIC ${EXTRA_LIBS})
