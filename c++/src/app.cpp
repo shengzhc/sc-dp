@@ -4,6 +4,7 @@
 #include "abstractfactory.h"
 #include "builder.h"
 #include "singleton.h"
+#include "adapter.h"
 
 int main(int argc, char const *argv[])
 {
@@ -13,7 +14,8 @@ int main(int argc, char const *argv[])
 	cout << "1. Creational - Factory Method" << endl;
 	cout << "2. Creational - Abstract Factory" << endl;
 	cout << "3. Creational - Builder" << endl;
-	cout << "4. Creational - Singleton" <<endl;
+	cout << "4. Creational - Singleton" << endl;
+	cout << "5. Structual - Adapter" << endl;
 
 	do {
 		cout << "Choose the example aboove(Q or q to abort): ";
@@ -38,6 +40,11 @@ int main(int argc, char const *argv[])
 			}
 			case 4: {
 				DesignPattern *const dp = new singleton::SingletonDesignPattern();
+				dp->example();
+				break;
+			}
+			case 5: {
+				DesignPattern *const dp = new adapter::AdapterDesignPattern();
 				dp->example();
 				break;
 			}
