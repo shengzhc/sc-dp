@@ -11,6 +11,7 @@
 #include "decorator.h"
 #include "facade.h"
 #include "flyweight.h"
+#include "proxy.h"
 
 int main(int argc, char const *argv[])
 {
@@ -27,6 +28,7 @@ int main(int argc, char const *argv[])
 	cout << "8. Structual - Decorator" << endl;
 	cout << "9. Structual - Facade" << endl;
 	cout << "10. Structural - Flyweight" << endl;
+	cout << "11. Structural - Proxy" << endl;
 
 	do {
 		cout << "Choose the example aboove(q to abort): ";
@@ -74,6 +76,10 @@ int main(int argc, char const *argv[])
 			}
 			case 10: {
 				dp = new flyweight::FlyweightDesignPattern();
+				break;
+			}
+			case 11: {
+				dp = new proxy::ProxyDesignPattern();
 				break;
 			}
 
