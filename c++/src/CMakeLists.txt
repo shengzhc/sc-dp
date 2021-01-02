@@ -23,6 +23,7 @@ add_executable(SC_DP_CPP
 	structural/flyweight.cpp
 	structural/proxy.cpp
 	behavior/cor.cpp
+	behavior/command.cpp
 )
 
 target_link_libraries(SC_DP_CPP PUBLIC ${EXTRA_LIBS})

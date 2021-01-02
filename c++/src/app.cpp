@@ -13,6 +13,7 @@
 #include "flyweight.h"
 #include "proxy.h"
 #include "cor.h"
+#include "command.h"
 
 int main(int argc, char const *argv[])
 {
@@ -31,9 +32,10 @@ int main(int argc, char const *argv[])
 	cout << "10. Structural - Flyweight" << endl;
 	cout << "11. Structural - Proxy" << endl;
 	cout << "12. Behavior - Chain of Responsibility" << endl;
+	cout << "13. Behavior - Command" << endl;
 
 	do {
-		cout << "Choose the example aboove(q to abort): ";
+		cout << "Choose the example above(q to abort): ";
 		string input = "";
 		cin >> input;
 		if (input == "q") break;
@@ -86,6 +88,10 @@ int main(int argc, char const *argv[])
 			}
 			case 12: {
 				dp = new cor::CORDesignPattern();
+				break;
+			}
+			case 13: {
+				dp = new command::CommandDesignPattern();
 				break;
 			}
 
