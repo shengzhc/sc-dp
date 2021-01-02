@@ -12,6 +12,7 @@
 #include "facade.h"
 #include "flyweight.h"
 #include "proxy.h"
+#include "cor.h"
 
 int main(int argc, char const *argv[])
 {
@@ -29,6 +30,7 @@ int main(int argc, char const *argv[])
 	cout << "9. Structual - Facade" << endl;
 	cout << "10. Structural - Flyweight" << endl;
 	cout << "11. Structural - Proxy" << endl;
+	cout << "12. Behavior - Chain of Responsibility" << endl;
 
 	do {
 		cout << "Choose the example aboove(q to abort): ";
@@ -80,6 +82,10 @@ int main(int argc, char const *argv[])
 			}
 			case 11: {
 				dp = new proxy::ProxyDesignPattern();
+				break;
+			}
+			case 12: {
+				dp = new cor::CORDesignPattern();
 				break;
 			}
 

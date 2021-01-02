@@ -22,6 +22,7 @@ add_executable(SC_DP_CPP
 	structural/facade.cpp
 	structural/flyweight.cpp
 	structural/proxy.cpp
+	behavior/cor.cpp
 )
 
 target_link_libraries(SC_DP_CPP PUBLIC ${EXTRA_LIBS})
@@ -30,6 +31,7 @@ target_include_directories(SC_DP_CPP PUBLIC
   "${PROJECT_BINARY_DIR}"
   $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/creational>
   $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/structural>
+  $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/behavior>
 )
 
 target_include_directories(SC_DP_CPP PRIVATE
