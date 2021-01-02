@@ -14,6 +14,7 @@
 #include "proxy.h"
 #include "cor.h"
 #include "command.h"
+#include "iterator.h"
 
 int main(int argc, char const *argv[])
 {
@@ -33,6 +34,7 @@ int main(int argc, char const *argv[])
 	cout << "11. Structural - Proxy" << endl;
 	cout << "12. Behavior - Chain of Responsibility" << endl;
 	cout << "13. Behavior - Command" << endl;
+	cout << "14. Behavior - Iterator" << endl;
 
 	do {
 		cout << "Choose the example above(q to abort): ";
@@ -92,6 +94,10 @@ int main(int argc, char const *argv[])
 			}
 			case 13: {
 				dp = new command::CommandDesignPattern();
+				break;
+			}
+			case 14: {
+				dp = new dp_iterator::IteratorDesignPattern();
 				break;
 			}
 
