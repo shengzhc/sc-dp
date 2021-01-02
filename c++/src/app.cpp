@@ -16,6 +16,7 @@
 #include "command.h"
 #include "iterator.h"
 #include "mediator.h"
+#include "memento.h"
 
 int main(int argc, char const *argv[])
 {
@@ -37,6 +38,7 @@ int main(int argc, char const *argv[])
 	cout << "13. Behavior - Command" << endl;
 	cout << "14. Behavior - Iterator" << endl;
 	cout << "15. Behavior - Mediator" << endl;
+	cout << "16. Behavior - Memento" << endl;
 
 	do {
 		cout << "Choose the example above(q to abort): ";
@@ -104,6 +106,10 @@ int main(int argc, char const *argv[])
 			}
 			case 15: {
 				dp = new mediator::MediatorDesignPattern();
+				break;
+			}
+			case 16: {
+				dp = new memento::MementoDesignPattern();
 				break;
 			}
 

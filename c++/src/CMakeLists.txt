@@ -26,6 +26,7 @@ add_executable(SC_DP_CPP
 	behavior/command.cpp
 	behavior/iterator.cpp
 	behavior/mediator.cpp
+	behavior/memento.cpp
 )
 
 target_link_libraries(SC_DP_CPP PUBLIC ${EXTRA_LIBS})
