@@ -15,6 +15,7 @@
 #include "cor.h"
 #include "command.h"
 #include "iterator.h"
+#include "mediator.h"
 
 int main(int argc, char const *argv[])
 {
@@ -35,6 +36,7 @@ int main(int argc, char const *argv[])
 	cout << "12. Behavior - Chain of Responsibility" << endl;
 	cout << "13. Behavior - Command" << endl;
 	cout << "14. Behavior - Iterator" << endl;
+	cout << "15. Behavior - Mediator" << endl;
 
 	do {
 		cout << "Choose the example above(q to abort): ";
@@ -98,6 +100,10 @@ int main(int argc, char const *argv[])
 			}
 			case 14: {
 				dp = new dp_iterator::IteratorDesignPattern();
+				break;
+			}
+			case 15: {
+				dp = new mediator::MediatorDesignPattern();
 				break;
 			}
 
