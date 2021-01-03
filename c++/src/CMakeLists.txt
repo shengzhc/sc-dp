@@ -29,6 +29,7 @@ add_executable(SC_DP_CPP
 	behavior/memento.cpp
 	behavior/observer.cpp
 	behavior/state.cpp
+	behavior/strategy.cpp
 )
 
 target_link_libraries(SC_DP_CPP PUBLIC ${EXTRA_LIBS})

@@ -19,6 +19,7 @@
 #include "memento.h"
 #include "observer.h"
 #include "state.h"
+#include "strategy.h"
 
 int main(int argc, char const *argv[])
 {
@@ -43,6 +44,7 @@ int main(int argc, char const *argv[])
 	cout << "16. Behavior - Memento" << endl;
 	cout << "17. Behavior - Observer" << endl;
 	cout << "18. Behavior - State" << endl;
+	cout << "19. Behavior - Strategy" << endl;
 
 	do {
 		cout << "Choose the example above(q to abort): ";
@@ -122,6 +124,10 @@ int main(int argc, char const *argv[])
 			}
 			case 18: {
 				dp = new dp_state::StateDesignPattern();
+				break;
+			}
+			case 19: {
+				dp = new strategy::StrategyDesignPattern();
 				break;
 			}
 
