@@ -31,6 +31,7 @@ add_executable(SC_DP_CPP
 	behavior/state.cpp
 	behavior/strategy.cpp
 	behavior/templatemethod.cpp
+	behavior/visitor.cpp
 )
 
 target_link_libraries(SC_DP_CPP PUBLIC ${EXTRA_LIBS})

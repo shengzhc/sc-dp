@@ -21,6 +21,7 @@
 #include "state.h"
 #include "strategy.h"
 #include "templatemethod.h"
+#include "visitor.h"
 
 int main(int argc, char const *argv[])
 {
@@ -47,6 +48,7 @@ int main(int argc, char const *argv[])
 	cout << "18. Behavior - State" << endl;
 	cout << "19. Behavior - Strategy" << endl;
 	cout << "20. Behavior - Template Method" << endl;
+	cout << "21. Behavior - Visitor" << endl;
 
 	do {
 		cout << "Choose the example above(q to abort): ";
@@ -134,6 +136,10 @@ int main(int argc, char const *argv[])
 			}
 			case 20: {
 				dp = new templatemethod::TemplateMethodDesignPattern();
+				break;
+			}
+			case 21: {
+				dp = new visitor::VisitorDesignPattern();
 				break;
 			}
 
