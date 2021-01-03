@@ -20,6 +20,7 @@
 #include "observer.h"
 #include "state.h"
 #include "strategy.h"
+#include "templatemethod.h"
 
 int main(int argc, char const *argv[])
 {
@@ -45,6 +46,7 @@ int main(int argc, char const *argv[])
 	cout << "17. Behavior - Observer" << endl;
 	cout << "18. Behavior - State" << endl;
 	cout << "19. Behavior - Strategy" << endl;
+	cout << "20. Behavior - Template Method" << endl;
 
 	do {
 		cout << "Choose the example above(q to abort): ";
@@ -128,6 +130,10 @@ int main(int argc, char const *argv[])
 			}
 			case 19: {
 				dp = new strategy::StrategyDesignPattern();
+				break;
+			}
+			case 20: {
+				dp = new templatemethod::TemplateMethodDesignPattern();
 				break;
 			}
 
