@@ -18,6 +18,7 @@
 #include "mediator.h"
 #include "memento.h"
 #include "observer.h"
+#include "state.h"
 
 int main(int argc, char const *argv[])
 {
@@ -41,6 +42,7 @@ int main(int argc, char const *argv[])
 	cout << "15. Behavior - Mediator" << endl;
 	cout << "16. Behavior - Memento" << endl;
 	cout << "17. Behavior - Observer" << endl;
+	cout << "18. Behavior - State" << endl;
 
 	do {
 		cout << "Choose the example above(q to abort): ";
@@ -116,6 +118,10 @@ int main(int argc, char const *argv[])
 			}
 			case 17: {
 				dp = new observer::ObserverDesignPattern();
+				break;
+			}
+			case 18: {
+				dp = new dp_state::StateDesignPattern();
 				break;
 			}
 
